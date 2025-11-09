@@ -1,0 +1,23 @@
+Language_Version
+- Python 3.13
+
+
+
+
+Library_Python
+- pillow (Compress Images)
+- flask (Web Tools)
+
+--installing--
+[ pip install pillow flask ]
+
+
+
+
+
+Software
+- Ghostscript (Compress PDF)
+
+--installing--
+[ sudo apt update ]               # Linux
+[ sudo apt install ghostscript ]  # Linux

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart File Compressor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+      <div class="brand">
+        <h1>Smart File Compressor</h1>
+        <small>Fast — Simple — Safe</small>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="card upload-card">
+      <h2>Upload file untuk dikompres</h2>
+      <p class="muted">Mendukung: .jpg .jpeg .png .pdf .docx</p>
+
+      <form action="/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+        <label class="file-label">
+          <input type="file" name="file" required>
+        </label>
+
+        <label for="level" class="select-label">Pilih tingkat kompresi</label>
+        <select name="level" id="level" required>
+          <option value="60">Tinggi</option>
+          <option value="40">Sedang</option>
+          <option value="20">Rendah</option>
+        </select>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Upload & Compress</button>
+          <button type="reset" class="btn ghost">Reset</button>
+        </div>
+
+        <p class="note">File input/output akan dibersihkan setiap kali kembali ke halaman utama.</p>
+      </form>
+    </section>
+
+    <section class="card info-card">
+      <h3>Tips</h3>
+      <ul>
+        <li>Pilih <strong>Tinggi</strong> untuk kualitas bagus (ukuran agak besar).</li>
+        <li>Pilih <strong>Sedang</strong> untuk hasil seimbang.</li>
+        <li>Pilih <strong>Rendah</strong> untuk ukuran terkecil.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Smart File Compressor — Built with Flask & Pillow</p>
+  </footer>
+</body>
+</html>

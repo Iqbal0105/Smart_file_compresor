@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Download — Smart File Compressor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+      <div class="brand">
+        <h1>Smart File Compressor</h1>
+        <small>Fast — Simple — Safe</small>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="card download-card">
+      <h2>File berhasil dikompres</h2>
+      <p class="muted">Nama file: <strong>{{ filename }}</strong></p>
+
+      <div class="download-actions">
+        <a href="{{ url_for('download_file', filename=filename) }}" class="btn primary">Download File</a>
+        <a href="{{ url_for('index') }}" class="btn ghost">Kembali ke Halaman Utama</a>
+      </div>
+
+      <p class="note">File akan dihapus otomatis saat kamu kembali ke halaman utama.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Smart File Compressor</p>
+  </footer>
+</body>
+</html>
